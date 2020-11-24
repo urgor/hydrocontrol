@@ -34,8 +34,8 @@ enum menuMode {MENU_MODE_LISTING, MENU_MODE_TUNING};
 enum menuIndex {MENU_IDX_WATER_DAY, MENU_IDX_LIGHT_DAY, MENU_IDX_TIME, MENU_IDX_WATER_MODE, MENU_IDX_LIGHT_MODE};
 enum type {TYPE_HOUR, TYPE_MINUTE, TYPE_BOOL, TYPE_ONEOFMANY};
 struct menuItemStruct {
-	char firstLine[16];
-	char secondLine[16];
+	char firstLine[17];
+	char secondLine[17];
 	char template[20];
 	enum menuItemType type;
 	uint8_t settingsMaxIdx;
@@ -170,7 +170,7 @@ void menuRedraw(void) {
 void showStandbyScreen(void) {
 	HAL_StatusTypeDef res;
 	RTC_TimeTypeDef time;
-	char str[16];
+	char str[25];
 	res = HAL_RTC_GetTime(&hrtc, &time, RTC_FORMAT_BIN);
 	if (res != HAL_OK) {
 		Error_Handler();
@@ -468,8 +468,8 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-    uint16_t encValue;
-	uint16_t encValuePrev;
+    uint16_t encValue = 1;
+	uint16_t encValuePrev = 1;
 	uint8_t  encDirection;
 	displayOn();
 	while (1) {
@@ -477,11 +477,6 @@ int main(void)
 		encDirection = READ_BIT(htim3.Instance->CR1, TIM_CR1_DIR);
 		if (encValuePrev != encValue && (encValue % 4 == 0)){
 			encoderSignal(0 == encDirection ? 1 : -1);
-//			if (0 == encDirection) {
-//				encoderSignal(1);
-//			} else {
-//				encoderSignal(-1);
-//			}
 		}
 		encValuePrev = encValue;
     /* USER CODE END WHILE */
