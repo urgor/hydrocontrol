@@ -475,7 +475,7 @@ int main(void)
 	while (1) {
 		encValue = __HAL_TIM_GET_COUNTER(&htim3);
 		encDirection = READ_BIT(htim3.Instance->CR1, TIM_CR1_DIR);
-		if (encValuePrev != encValue && (encValue % 4 == 0)){
+		if (encValuePrev != encValue && (encValue % 2 == 0)){
 			encoderSignal(0 == encDirection ? 1 : -1);
 		}
 		encValuePrev = encValue;
