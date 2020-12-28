@@ -428,8 +428,8 @@ int main(void)
 	menuItems[MENU_IDX_WATER_MODE].valuePosition[1] = 5;
 	menuItems[MENU_IDX_WATER_MODE].valuePosition[2] = 10;
 	menuItems[MENU_IDX_WATER_MODE].values[0] = 0;
-	menuItems[MENU_IDX_WATER_MODE].values[1] = 0;
-	menuItems[MENU_IDX_WATER_MODE].values[2] = 1;
+	menuItems[MENU_IDX_WATER_MODE].values[1] = 1;
+	menuItems[MENU_IDX_WATER_MODE].values[2] = 0;
 	menuItems[MENU_IDX_WATER_MODE].valueType[0] = TYPE_ONEOFMANY;
 	menuItems[MENU_IDX_WATER_MODE].valueType[1] = TYPE_ONEOFMANY;
 	menuItems[MENU_IDX_WATER_MODE].valueType[2] = TYPE_ONEOFMANY;
@@ -444,8 +444,8 @@ int main(void)
 	menuItems[MENU_IDX_LIGHT_MODE].valuePosition[1] = 5;
 	menuItems[MENU_IDX_LIGHT_MODE].valuePosition[2] = 10;
 	menuItems[MENU_IDX_LIGHT_MODE].values[0] = 0;
-	menuItems[MENU_IDX_LIGHT_MODE].values[1] = 0;
-	menuItems[MENU_IDX_LIGHT_MODE].values[2] = 1;
+	menuItems[MENU_IDX_LIGHT_MODE].values[1] = 1;
+	menuItems[MENU_IDX_LIGHT_MODE].values[2] = 0;
 	menuItems[MENU_IDX_LIGHT_MODE].valueType[0] = TYPE_ONEOFMANY;
 	menuItems[MENU_IDX_LIGHT_MODE].valueType[1] = TYPE_ONEOFMANY;
 	menuItems[MENU_IDX_LIGHT_MODE].valueType[2] = TYPE_ONEOFMANY;
